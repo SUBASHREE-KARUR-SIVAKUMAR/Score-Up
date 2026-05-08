@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScoreUp | AI Study Companion</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- High-Tech Loader Overlay -->
+    <div id="aiLoader" class="loader-overlay hidden">
+        <div class="loader-content">
+            <div class="brain-icon">
+                <i class="fas fa-microchip"></i>
+                <div class="pulse-ring"></div>
+            </div>
+            <h3>ScoreUp AI is Thinking...</h3>
+            <p>Crafting your personalized challenges</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-brain-circuit"></i>
+                <span>ScoreUp</span>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Practice</a></li>
+                    <li><a href="history.html" class="nav-link">History</a></li>
+                    <li><a href="dashboard.html" class="nav-link">Stats</a></li>
+                    <li><a href="login.html" class="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="user-greeting">
+            <h2>Ready to Level Up, <span id="userName">Student</span>?</h2>
+        </div>
+
+        <!-- Generator Section -->
+        <section id="question-generator" class="card glass-card">
+            <div class="input-group">
+                <label>What are we studying today?</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="topicInput" placeholder="e.g., Cellular Respiration, Calculus...">
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Difficulty</label>
+                    <div class="difficulty-chips">
+                        <button class="chip" data-level="Easy">Easy</button>
+                        <button class="chip active" data-level="Intermediate">Intermediate</button>
+                        <button class="chip" data-level="Hard">Hard</button>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Questions</label>
+                    <input type="number" id="numQuestionsInput" value="1" min="1" max="5">
+                </div>
+            </div>
+
+            <button id="generateBtn" class="primary-btn">Generate Questions</button>
+        </section>
+
+        <!-- Question Picker Area -->
+        <section id="question-selection-area" class="card glass-card hidden">
+            <h3><i class="fas fa-list-check"></i> Pick your challenge:</h3>
+            <div id="questionListItems" class="q-list"></div>
+        </section>
+
+        <!-- Answer Area -->
+        <section id="question-answer-area" class="card glass-card hidden">
+            <!-- Back Button Added Here -->
+            <button id="backToSelectionBtn" class="text-btn" style="margin-bottom: 1.5rem; display: inline-flex; align-items: center; gap: 8px; color: var(--accent); font-weight: 700; cursor: pointer; background: none; border: none;">
+                <i class="fas fa-arrow-left"></i> Back to Questions
+            </button>
+
+            <p class="question-text" style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem; color: #fff; line-height: 1.5;"></p>
+            
+            <textarea id="answerInput" placeholder="Type your explanation here..." rows="5"></textarea>
+            
+            <button id="submitAnswerBtn" class="submit-action-btn">Submit for Review</button>
+            
+            <div id="feedbackDisplay" class="feedback-box hidden">
+                <h4 class="status-text"></h4>
+                <div class="feedback-content"></div>
+                <div class="correct-answer-box">
+                    <strong>ScoreUp's Ideal Explanation:</strong>
+                    <p class="correct-text"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 ScoreUp AI. Built for Subashree's Success. 🚀</p>
+        <button id="resetDataBtn" class="reset-link">Reset All Data</button>
+    </footer>
+
+    <div id="customAlertModal" class="modal hidden">
+        <div class="modal-content glass-card">
+            <p id="customAlertMessage"></p>
+            <button class="chip active modal-ok-btn">OK</button>
+        </div>
+    </div>
+
+    <script src="static/storage-util.js" defer></script>
+    <script src="static/index-script.js" defer></script>
+    <script>
+        document.querySelectorAll('.chip').forEach(c => {
+            c.addEventListener('click', () => {
+                const parent = c.parentElement;
+                parent.querySelector('.chip.active').classList.remove('active');
+                c.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

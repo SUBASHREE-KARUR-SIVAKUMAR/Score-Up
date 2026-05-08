@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ScoreUp</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: var(--bg);
+        }
+        .login-card {
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+        }
+        .login-logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        .login-logo i {
+            color: var(--accent);
+            filter: drop-shadow(0 0 10px var(--accent-glow));
+        }
+        .input-group {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+        .form-footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+        }
+        .form-footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        /* Fix for the password and name inputs to match the ScoreUp 2.0 style */
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1rem 1.2rem 1rem 3rem;
+            color: #fff;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        input:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(15, 23, 42, 0.8);
+            box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+        }
+        .primary-btn {
+            background: var(--accent) !important;
+            box-shadow: 0 10px 20px var(--accent-glow) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card card glass-card">
+        <div class="login-logo">
+            <i class="fas fa-brain-circuit"></i>
+            <span>ScoreUp</span>
+        </div>
+        
+        <h2>Welcome Back</h2>
+        <p style="color: var(--text-dim); margin-bottom: 2rem;">Ready to continue your learning journey?</p>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label>Full Name</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="nameInput" placeholder="What should we call you?" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="emailInput" placeholder="subashree@example.com" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="passwordInput" placeholder="••••••••" required>
+                </div>
+            </div>
+
+            <button type="submit" class="primary-btn pulse-effect">
+                Sign In <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+            </button>
+        </form>
+
+        <div class="form-footer">
+            Don't have an account? <a href="#">Create one</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get the name from the input
+            const name = document.getElementById('nameInput').value;
+            
+            // Save it to localStorage so index.html can use it
+            localStorage.setItem('scoreup_user_name', name);
+            
+            // Redirect to the practice page
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

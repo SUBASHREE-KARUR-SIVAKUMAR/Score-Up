@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScoreUp | Stats</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo"><i class="fas fa-brain-circuit"></i><span>ScoreUp</span></div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Practice</a></li>
+                    <li><a href="history.html" class="nav-link">History</a></li>
+                    <li><a href="dashboard.html" class="nav-link active">Stats</a></li>
+                    <li><a href="login.html" class="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="stats-grid">
+            <div class="card stat-item">
+                <h3>Total Answered</h3>
+                <p id="totalQuestionsStat">0</p>
+            </div>
+            <div class="card stat-item">
+                <h3>Current Accuracy</h3>
+                <p id="correctAnswersStat">0%</p>
+            </div>
+            <div class="card stat-item weakest-topic-card">
+                <h3><i class="fas fa-bolt"></i> Focus Topic</h3>
+                <p id="weakestTopicName" style="font-size: 1.5rem !important">N/A</p>
+            </div>
+        </div>
+
+        <div class="card chart-block">
+            <h3 style="margin-bottom: 2rem">Activity Overview</h3>
+            <div style="height: 300px">
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <script src="static/storage-util.js"></script>
+    <script src="static/dashboard-script.js"></script>
+</body>
+</html>
