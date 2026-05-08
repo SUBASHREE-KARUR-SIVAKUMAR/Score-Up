@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (aiLoader) aiLoader.classList.remove('hidden');
 
         try {
-            const response = await fetch('http://127.0.0.1:5000/generate_question', {
+            const response = await fetch('https://score-up-backend.onrender.com/generate_question', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ topic, num_questions: parseInt(num), difficulty })
