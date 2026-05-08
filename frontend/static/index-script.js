@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         submitAnswerBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Analyzing...';
 
         try {
-            const response = await fetch('http://127.0.0.1:5000/evaluate_answer', {
+            const response = await fetch('https://score-up-backend.onrender.com/evaluate_answer', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
