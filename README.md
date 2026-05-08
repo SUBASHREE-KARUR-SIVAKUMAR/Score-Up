@@ -33,7 +33,7 @@ Installation
 Set up Virtual Environment:
 python -m venv venv
 source venv/bin/activate  # Mac/Linux
-# or
+(or)
 venv\Scripts\activate  # Windows
 
 
