@@ -60,5 +60,8 @@ Start the frontend: Open index.html with Live Server in VS Code.
 # 🛡️ Security
 This project is configured with a .gitignore to ensure that sensitive data like .env and bulky folders like venv/ are never pushed to the public repository.
 
+# 🏆 Recognition
+*   **DATASET Edition 2 Hackathon:** This project was developed and presented during the DATASET Edition 2 Hackathon organized by VIT Chennai (Dec 2025).
+
 Developed with ❤️ by Subashree
 Connect with me on [LinkedIn](https://www.linkedin.com/in/subashree-karur-sivakumar/)
