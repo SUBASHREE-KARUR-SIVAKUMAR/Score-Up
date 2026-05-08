@@ -1,9 +1,9 @@
-ScoreUp: Your AI-Powered Adaptive Study Companion 🚀
+# ScoreUp: Your AI-Powered Adaptive Study Companion 🚀
 ScoreUp is a sophisticated full-stack learning platform designed to transform how students master complex subjects. Move beyond passive reading with a tool that uses Active Recall and Semantic AI Evaluation to challenge your understanding.
 🌐 Live Demo
 Check out the live application here: https://score-up-hack.netlify.app
 
-🌟 Key Features
+# 🌟 Key Features
 
 Deep Conceptual Questioning: Powered by Llama 3.3 (via Groq), ScoreUp generates unique questions based on your specific topic and chosen difficulty (Easy, Intermediate, Hard). It avoids simple definitions and focuses on "how" and "why" logic.
 AI Semantic Review: Unlike basic quizzes, our AI analyzes the logic of your typed explanations. It catches misconceptions, logical errors, and even spelling slips, acting as a personal 24/7 tutor.
@@ -13,7 +13,7 @@ Visual Progress Tracking: A high-tech dashboard featuring Chart.js to visualize 
 Modern Glassmorphism UI: A sleek, responsive dark-themed interface designed for a premium, distraction-free user experience.
 
 
-🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 Frontend: HTML5, Modern CSS3 (Glassmorphism, Flexbox, Grid), Vanilla JavaScript (ES6+)
 Backend: Python, Flask, Flask-CORS
@@ -22,20 +22,13 @@ Data Visualization: Chart.js
 Environment Management: Dotenv (Security-first approach)
 
 
-🚀 Local Setup
+# 🚀 Local Setup
 Prerequisites
 
 Python 3.8+
 A Groq API Key (Get one for free at console.groq.com)
 
 Installation
-
-
-Clone the repo:
-git clone https://github.com/SUBASHREE-KARUR-SIVAKUMAR/Score-Up.git
-cd Score-Up
-
-
 
 Set up Virtual Environment:
 python -m venv venv
@@ -64,7 +57,7 @@ Start the frontend: Open index.html with Live Server in VS Code.
 
 
 
-🛡️ Security
+# 🛡️ Security
 This project is configured with a .gitignore to ensure that sensitive data like .env and bulky folders like venv/ are never pushed to the public repository.
 
 Developed with ❤️ by Subashree
