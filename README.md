@@ -62,7 +62,7 @@ This project is configured with a .gitignore to ensure that sensitive data like 
 
 # 🏆 Recognition
 *   **DATASET Edition 2 Hackathon:** This project was developed and presented during the DATASET Edition 2 Hackathon organized by VIT Chennai (Dec 2025).
-![Certificate]https://github.com/SUBASHREE-KARUR-SIVAKUMAR/Score-Up/commits?author=SUBASHREE-KARUR-SIVAKUMAR
+[Certificate](https://github.com/SUBASHREE-KARUR-SIVAKUMAR/Score-Up/blob/main/SUBASHREE%20KARUR%20SIVAKUMAR-DATASET%20EDITION%202.pdf)
 
 Developed with ❤️ by Subashree
 Connect with me on [LinkedIn](https://www.linkedin.com/in/subashree-karur-sivakumar/)
